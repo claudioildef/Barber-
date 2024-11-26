@@ -1,0 +1,23 @@
+{
+  "name": "museu",
+  "version": "1.0.0",
+  "description": "Exemplo utilizado nas aulas de nodejs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "nodejs",
+    "museu",
+    "tarsila"
+  ],
+  "author": "André Luís Bordignon",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^4.21.0",
+    "index.js": "^0.0.3",
+    "joi": "^17.13.3",
+    "mysql2": "^3.11.3"
+  }
+}
