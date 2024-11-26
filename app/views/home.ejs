@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmácia Online</title>
+    <link rel="stylesheet" type="text/css" href="./styles/home.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="title">Bem vindo!</h1>
+        <!-- -->
+        
+        <div class="medicamentos-container">
+            <table class="medicamentos-table">
+                <th>Código</th>
+                <th>Nome</th>
+                <th>Quantidade</th>
+                <th>Retirados</th>
+                <tbody>
+                    <% for(let i=0; i < medicamentos.length; i++) { %>
+                        <tr>
+                            <td><%= medicamentos[i].id %></td>
+                            <td><%= medicamentos[i].nome_medicamento %></td>
+                            <td><%= medicamentos[i].quantidade %></td>
+                            <td><%= medicamentos[i].quantidade_retirada %></td>
+                        </tr>
+                        <% } %>
+                </tbody>
+            </table>
+            
+        </div>
+        
+        <div>
+            <h2>Retirada de medicamentos</h2>
+            <form action="/medicamento/retirar" method="post" class="retirada-form">
+                <input type="text" name="cpf" placeholder="CPF do Munícipe" />
+                <input type="number" name="id_medicamento" placeholder="Código do Medicamento">
+                <button class="retirar-button" type="submit">Retirar Medicamento</button>
+            </form>
+        </div> 
+        <% if(mensagem) { %>
+            <p><%= mensagem %></p>
+            <% } %>
+    </div>
+</body>
+
+</html>
